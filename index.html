@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+
+    <!-- Conexión con hojas de estilo externas para resetear estilos y aplicar los propios -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Conexión con Google Fonts para usar la tipografía 'Inter' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Conexión con FontAwesome para usar íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <main>
+        <img src="imagenes/logo.png" class="logo" alt="Logo de la aplicación Encriptador">
+        <div class="contenedor-entrada">
+            <section class="mensaje-usuario">
+                <textarea id="mensaje" class="mensaje" placeholder="Ingrese el texto aquí" required></textarea>
+            </section>
+            <p id="mensajeError" class="hidden">Debes ingresar solo minúsculas</p>
+            <section class="validacion">
+                <img src="imagenes/circulo-exclamacion.png" id="circulo-exclamacion" alt="Ícono de advertencia">
+                <p>Solo letras minúsculas y sin acentos</p>
+            </section>
+
+            <div class="contenedor-botones">
+                <section class="botones-principales">
+                    <button type="button" id="encriptar">Encriptar</button>
+                    <button type="button" id="desencriptar">Desencriptar</button>
+                </section>
+            </div>
+            <button type="button" id="limpiar" class="boton-limpiar">Nuevo Mensaje</button>
+        </div>
+
+
+        <div class="contenedor-resultado">
+            <section class="resultado-mensaje">
+                <img src="imagenes/muneco.png" id="muneco" class="visible" alt="Muñeco representativo de espera">
+                <p id="texto-informativo1" class="visible">Ningún mensaje fue encontrado</p>
+                <p id="texto-informativo2" class="visible">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <textarea id="resultado" class="resultado hidden" readonly></textarea>
+                <p id="mensaje-portapapeles" class="resultado hidden"></p>
+                <button type="button" id="copiar" class="boton-copiar hidden">Copiar</button>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Esta aplicación fue creada por Carmen Araya Rodríguez como parte del desafío Encriptador
+                de Oracle ONE - Alura G6</p>
+            <div class="footer-links">
+                <a href="https://github.com/CarmenArayaRodriguez" target="_blank"><i class="fab fa-github"></i></a> |
+                <a href="https://www.linkedin.com/in/carmenarayarodriguez" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Conexión con el archivo JavaScript para la lógica de la aplicación -->
+    <script src="app.js"></script>
+</body>
+
+</html>
